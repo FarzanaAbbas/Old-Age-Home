@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 function RunServer(){
     try{
-        mongoose.connect();
+        mongoose.connect(process.env.MONGO_DB_URL);
         console.log('mongoose is connected')
     } catch (error) {
         console.log('not connected')
