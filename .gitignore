@@ -1,0 +1,4 @@
+/server/node_modules
+/server/.env
+
+These things we are not uploading in github

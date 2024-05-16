@@ -1,0 +1,41 @@
+/* Navbar.css */
+
+.navbar {
+    background-color: white;
+    color: #0073e6;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .navbar.scrolled {
+    background-color: #3785d3; /* Change color when scrolled */
+  }
+  
+  .navbar h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .navbar-links {
+    display: flex;
+  }
+  
+  .link {
+    color: #0073e6;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: color 0.3s ease-in-out; /* Smooth color transition */
+  }
+  
+  .link:hover {
+    color: #a9bccf;
+    text-decoration: none;
+  }
+  
+  .link:last-child {
+    margin-right: 0;
+  }
+  

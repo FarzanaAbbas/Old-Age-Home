@@ -1,0 +1,38 @@
+.statsss-banner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* /* background-color: #b56576;  */
+    color: white;
+    padding: 20px 10px;
+    border-radius: 20px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat i {
+    margin-bottom: 10px; /* Space between icon and number */
+    color: white; /* Icon color */
+}
+
+.stat h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.stat p {
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .stats-banner {
+        flex-direction: column; /* Stack stats vertically on smaller screens */
+    }
+
+    .stat {
+        margin-bottom: 20px; /* Add space between stacked stats */
+    }
+}

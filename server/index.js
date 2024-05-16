@@ -1,0 +1,28 @@
+// require('dotenv').config()
+const express = require('express')
+const RunServer = require('./database/connection')
+const userRoutes = require('./routes/userRoutes')
+const medicineRoutes = require('./routes/medicineRoutes')
+const visitorRoutes = require('./routes/visitorRoutes')
+const patientRoutes = require('./routes/patientRoutes')
+const doctorRoutes = require('./routes/doctorRoutes')
+const morgan = require('morgan')
+const helmet = require('helmet')
+const cors = require('cors')
+const app = express()
+
+app.use(express.json())
+app.use(morgan('dev'))
+app.use(helmet()) 
+app.use(cors())
+
+app.use('/api/v1/user', userRoutes)
+app.use('/api/v1/patients', patientRoutes)
+app.use('/api/v1/doctors', doctorRoutes)
+app.use('/api/v1/medicines', medicineRoutes)
+app.use('/api/v1/visitors', visitorRoutes)
+RunServer()
+
+app.listen(3000, () => {
+    console.log('server is running on 3000 port!')
+})

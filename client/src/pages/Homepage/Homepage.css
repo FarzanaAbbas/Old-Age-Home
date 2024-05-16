@@ -1,0 +1,228 @@
+/* Homepage.css */
+
+/* Overall layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Change font family */
+  }
+  
+  /* Header */
+  header {
+    background: url('/image-1.jpg') center/cover;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  .para {
+    /* background-color: #95bfe4; */
+    color: #a2c1e0;
+    font-size: 15px;
+    /* border-radius: 15px; */
+  }
+  
+  header h1 {
+    font-size: 3em; /* Increase font size */
+    margin-bottom: 10px;
+    font-weight: bold; /* Add font weight */
+  }
+  
+  header p {
+    font-size: 1.5em; /* Increase font size */
+    font-weight: 500; /* Add font weight */
+  }
+  
+  /* Services and stats sections */
+  .services, .stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: auto; /* Add scroll behavior */
+    max-height: 60vh; /* Set max height to enable scrolling */
+  }
+  
+  .service, .stat {
+    width: calc(70% - 30px);
+    padding: 20px;
+    background-color: #0073e6;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .service:hover, .stat:hover {
+    transform: translateY(-5px);
+  }
+  
+  .service h2 {
+    color: #0073e6; /* Change text color */
+    margin-bottom: 10px;
+  }
+  
+  .stat span {
+    font-size: 2em;
+    color: #0073e6;
+  }
+  
+  /* Footer */
+  footer {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    z-index: 1000;
+    overflow: hidden; /* Ensure the pseudo-element doesn't extend beyond the footer */
+}
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/medical.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(5px); /* Adjust blur radius as needed */
+    z-index: -1; /* Ensures it stays behind the content */
+}
+footer:hover {
+    transform: translateY(-5px);
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #0073e6;
+  }
+  
+  .contact-info,
+  .social-links1 {
+    flex: 1;
+    margin-top: 50px;
+    text-align: center;
+    
+  }
+  
+  .contact-info h2,
+  .social-links1 h2 {
+    font-size: 1.2rem;
+    margin-top: 50px;
+    bottom: 0;
+    text-align: center;
+  }
+  
+  .contact-info p {
+    font-size: 1rem;
+    margin-top: 40px;
+
+  }
+  
+  .social-links1 ul {
+    list-style: none;
+    padding: 10px;
+
+  }
+  
+  .social-links1 ul li {
+    margin-bottom: 10px;
+  }
+  
+  .social-links1 ul li a {
+    color: #0073e6;
+    text-decoration: none;
+
+  }
+  
+  .copyright {
+    text-align: center;
+    margin-top: 20px;
+  }
+  header.hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  
+  header.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Add transition for smooth animation */
+  }
+
+  .hidden {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Ensures equal spacing around all services */
+    padding: 20px;
+}
+
+.service {
+    background-color: #ffffff;
+    border: 1px solid #ccc; /* subtle border for each card */
+    border-radius: 8px; /* rounded corners */
+    overflow: hidden;
+    width: 220px; /* fixed width for consistency */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* soft shadow for depth */
+    transition: transform 0.3s ease-in-out;
+}
+
+.service:hover {
+    transform: translateY(-10px); /* subtle hover effect */
+}
+
+.service img {
+    width: 100%;
+    height: 160px; /* fixed height for consistency */
+    object-fit: cover; /* ensures the image covers the area properly */
+}
+
+.service h3 {
+    color: #005eb8; /* color for titles to match the deep blue theme */
+    padding: 10px 0;
+}
+
+.service p {
+    color: #666; /* dark grey for text for better readability */
+    font-size: 14px;
+    padding: 0 10px 20px; /* padding to align text nicely within the card */
+}
+.headingService{
+    text-align:center;
+    color: #0073e6;
+    /* margin-left: 20%; */
+}
+
+.ourServices{
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    color: #0073e6;
+    font-weight: 600;
+    
+}

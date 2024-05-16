@@ -1,0 +1,53 @@
+.visitor-dashboard {
+    background-color: skyblue;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; /* Adjust the width of the dashboard */
+    margin: auto; 
+    /* margin-left: 50px; */
+}
+
+.visitor-dashboard form {
+    margin-bottom: 20px; /* Add some space between the form and the visitors list */
+    text-align: center; /* Center the form content */
+}
+
+.visitor-dashboard form input {
+    width: calc(100% - 22px); /* Adjust the width of the input fields */
+    padding: 8px; /* Adjust the padding */
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.visitor-dashboard form button {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: rgb(22, 123, 163);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.visitor-dashboard form button:hover {
+    background-color: rgb(155, 210, 234);
+}
+
+.visitor-list-container {
+    background-color: #fff; /* Set the background color of the visitor list container */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center; /* Center the content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a box shadow for the container */
+    max-width: 500px; /* Limit the width of the container */
+    margin: auto; /* Center the container horizontally */
+}
+
+.visitor-list {
+    padding: 10px;
+}
+
+.visitor-list p {
+    margin-bottom: 10px; /* Add some space between each visitor entry */
+}
